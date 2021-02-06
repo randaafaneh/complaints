@@ -1,0 +1,27 @@
+<body>
+
+    <div class = 'container'>
+        <div class= 'form-container'>
+    <form [formGroup]="userForm" (ngSubmit)="postdata(userForm)">
+        <h1 class="h4 mb-4">Log in</h1>
+    
+        <div class="col">
+        <input type="email" formControlName='email' class="form-control" placeholder="E-mail" name='firstName'>
+    </div>
+    <div class="col">
+    
+        <input type="password" formControlName='password' class="form-control" placeholder="Password" name='lastName'>
+    </div>  
+    
+      
+        <button type="submit" (click)='changePath()'>Log in</button>
+    <router-outlet></router-outlet>
+
+        <p> Don't have an account? <a routerLink = '/register' href='register.component.html'>
+            Sign up</a> </p>
+    <router-outlet></router-outlet>
+    </form>
+    </div>
+    </div>
+    </body>
+    

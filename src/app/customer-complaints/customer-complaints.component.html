@@ -1,0 +1,44 @@
+<body>
+
+    <div class = 'container'>
+        <div class= 'form-container'>
+    <form [formGroup]="complaintForm" (ngSubmit)="postdata(complaintForm)">
+        <h1 class="h4 mb-4">Complaints    </h1>
+            <p>Please write your complaint below</p>
+    
+    
+        <div class="radio-input">
+            <label> Complaint type</label>
+        <input type="radio"
+         formControlName='complaintType'   
+         name='complaintType'
+         value="type1"> <label for='type1'> Type 1</label> 
+
+         <input type="radio"
+         formControlName='complaintType'  
+         name='complaintType'
+         value="type2"> <label for='type2'> Type 2</label> 
+    </div>
+    <div class="col">
+        <label style="margin: 10px;"> Select country</label>
+        <select class ='form-control' name='country'>
+            <option value ='Jordan'> Jordan</option>
+            <option value ='UAE'> UAE</option>
+        </select>
+    </div>
+    <div class="col">
+        <label style="margin: 10px;"> Complaint</label><br><br>
+        <textarea  name='complaint' formControlName='complaint' placeholder="Write your complaint here">
+        
+        </textarea>
+    </div>
+  
+    
+      
+        <button type="submit" (click)= 'postdata(complaintForm)'>Submit</button>
+
+    </form>
+    </div>
+    </div>
+    </body>
+    
